@@ -1,0 +1,40 @@
+@import './../base/variables.scss';
+@import "./../base/mixins.scss";
+
+.banner {
+  background: linear-gradient(to bottom,rgba(0, 0, 0, 0.1) 0%,rgba(0, 0, 0, 0.2) 50%,rgba(0, 0, 0, 1) 100%),
+    url("./../../assets/image/bg-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+
+  .banner__container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+}
+
+.banner__content {
+  max-width: 85%;
+  text-align: center;
+
+  h2 {
+    color: $neutral-2;
+    font-weight: $black;
+    margin-bottom: $margin_elemt;
+  }
+
+  p {
+    color: $neutral-2;
+    font-size: 2.5rem;
+    line-height: 2.8rem;
+    text-align: center;
+    margin-bottom: calc($margin_elemt*3);
+  }
+
+  .btn--banner{
+    @include buttonLarge($neutral-2,$neutral-2,$color-1,$color-2,inline-block);
+  }
+}

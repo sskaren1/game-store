@@ -1,0 +1,35 @@
+@import "./../base/mixins.scss";
+@import './../base/variables';
+
+.shoppingCart {
+  min-height: 80vh;
+  padding: 4rem 0;
+}
+.basket__table {
+  table {
+    width: 100%;
+  }
+  thead {
+    font-size: 2rem;
+  }
+  tbody {
+    td {
+      font-size: 1.6rem;
+      text-align: center;
+      button {
+        margin: 0 1rem 1rem;
+        svg{
+          font-size: 1.8rem;
+        }
+      }
+      span{
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+.summary{
+  .btn--payment{
+    @include buttonSmall($neutral-2,$neutral-2,$color-2,$color-3,block);
+  }
+}

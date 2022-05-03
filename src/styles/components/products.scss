@@ -1,0 +1,59 @@
+@import './../base/variables.scss';
+@import "./../base/mixins.scss";
+
+.productStore {
+  padding: 10rem 0;
+  min-height: 80vh;
+
+  .productStore__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+.card {
+  min-width: 25rem;
+  max-width: 30rem;
+  min-height: 45rem;
+  background-color: $color-1-l;
+  border-radius: 1rem;
+  padding: $padding_elemt 0;
+
+  .card__photo {
+      margin-bottom: $margin-elemt;
+      
+      img{
+        border-radius: 1rem;
+        object-fit: cover;
+      }
+  }
+
+  .card__description{
+      .name{
+        margin-bottom: $margin-elemt;
+      }
+      .prices {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .price {
+          font-weight: bold;
+        }            
+
+        .btn--add{
+          font-size: 1.6rem;
+          @include buttonSmall($color-2,$neutral-2,trasparent,$color-2,inline-block);
+        }
+      }      
+  }
+}
+
+.price-tacched {
+  color: $color-3-l;
+  text-decoration: line-through;
+}
+

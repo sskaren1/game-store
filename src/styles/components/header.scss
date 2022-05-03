@@ -1,0 +1,24 @@
+@import "./../base/variables.scss";
+@import "./../base/mixins.scss";
+
+.header {
+  background-color: rgba($color: $color-2-l, $alpha: 0.8);
+  position: absolute;
+  width: 100%;
+}
+
+.header--main {
+  background-color: $color-2-l;
+  position: static;
+}
+
+.logo {
+  h1 {
+    &:hover {
+      color: $color-1;
+    }
+    svg {
+      font-size: 3rem;
+    }
+  }
+}
