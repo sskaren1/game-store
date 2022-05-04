@@ -6,6 +6,7 @@ import swal from "sweetalert";
 export const UserContext = createContext();
 
 export const UserProvider = (props) => {
+
   const [basket, setBasket] = useState(
     JSON.parse(localStorage.getItem("basket")) ?? []
   );
@@ -32,6 +33,7 @@ export const UserProvider = (props) => {
         products.length = 0;
         setBasket(products);
         localStorage.setItem("basket", JSON.stringify(basket)); 
+
         window.location.href = "/basket-view";
         // window.location.href = "https://game-store-ks.vercel.app/basket-view";
       }
