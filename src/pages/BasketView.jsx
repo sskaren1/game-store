@@ -44,7 +44,7 @@ const basketView = () => {
       while (products.length > 0) products.pop();
       setBasket(products);
       localStorage.setItem("basket", JSON.stringify(basket));
-      window.location.href = "/basket-view";
+      window.location.href = "https://game-store-ks.vercel.app/basket-view";
 
       // localStorage.removeItem("basket");
       // setBasket([]);
@@ -54,7 +54,7 @@ const basketView = () => {
 
   const handlePurchase = () => {
     // Redirect
-    window.location.href = "/product-store";
+    window.location.href = "https://game-store-ks.vercel.app/product-store";
   };
 
   useEffect(() => {
