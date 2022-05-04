@@ -1,3 +1,5 @@
+//Importing router-dom
+import { useNavigate } from "react-router-dom";
 //Importing Hooks
 import { useState, useEffect, useContext } from "react";
 // Importing Context
@@ -15,6 +17,7 @@ import emptyCart from "./../assets/image/empty_cart.svg";
 import "./../styles/pages/basketView.scss";
 
 const basketView = () => {
+  let navigate = useNavigate();
   const {
     basket,
     setBasket,
@@ -44,7 +47,8 @@ const basketView = () => {
       while (products.length > 0) products.pop();
       setBasket(products);
       localStorage.setItem("basket", JSON.stringify(basket));
-      window.location.href = "https://game-store-ks.vercel.app/basket-view";
+      window.location.href = "/basket-view";
+      // window.location.href = "https://game-store-ks.vercel.app/basket-view";
 
       // localStorage.removeItem("basket");
       // setBasket([]);
@@ -54,8 +58,9 @@ const basketView = () => {
 
   const handlePurchase = () => {
     // Redirect
-    window.location.href = "https://game-store-ks.vercel.app/product-store";
-  };
+    window.location.hre = "/product-store";
+    // window.location.hre = "https://game-store-ks.vercel.app/product-store";
+  };f
 
   useEffect(() => {
     calculatePrice();

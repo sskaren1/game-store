@@ -32,7 +32,8 @@ export const UserProvider = (props) => {
         products.length = 0;
         setBasket(products);
         localStorage.setItem("basket", JSON.stringify(basket)); 
-        window.location.href = "https://game-store-ks.vercel.app/basket-view";
+        window.location.href = "/basket-view";
+        // window.location.href = "https://game-store-ks.vercel.app/basket-view";
       }
     });
   }
